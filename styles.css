@@ -1,0 +1,161 @@
+
+/* ===== GLOBAL STYLES ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif ;
+  background-color: #c0c8cf;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+  background:#fef6e4;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 25px;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+h1 {
+  text-align: center;
+  color: #2b2729;
+  margin-bottom: 20px;
+}
+
+/* ===== INPUT AREA (FLEXBOX) ===== */
+.input-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-area input {
+  flex: 1 1 45%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  min-width: 140px;
+}
+
+.input-area button {
+   width: 50%; 
+  background-color: #051221;
+  border: none;
+  color: white;
+  padding: 10px 15px; 
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  justify-content: center;
+  display: flex;
+  margin-left: 25%;
+  
+}
+
+.input-area button:hover {
+  background-color: #363a40;
+}
+
+/* ===== GROCERY LIST ===== */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+  margin-left: 25%;
+}
+
+li {
+  background: #54575a;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.deleteBtn {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.deleteBtn:hover {
+  background-color: #cc0000;
+}
+
+/* ===== TOTAL BUTTON ===== */
+#totalBtn {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #161817;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  width: 50%;
+  margin-left: 25%;
+}
+
+#totalBtn:hover {
+  background-color: #666d6b;
+}
+
+#totalDisplay {
+  text-align: center;
+  color: #333;
+  margin-top: 15px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 640px) {
+  .container {
+    padding: 15px;
+  }
+
+  .input-area {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-area input,
+  button {
+    flex: 1 1 100%;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .deleteBtn {
+    align-self: flex-end;
+  }
+}

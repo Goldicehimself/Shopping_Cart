@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+   
+    <center>
+
+       <div class="container">
+    <h1>🛒Shopping Cart</h1>
+
+    <div class="input-area">
+      <input type="text" id="itemName" placeholder="Enter items " required>
+      <input type="number" id="itemPrice" placeholder="Enter price" required>
+      <button id="addBtn">Add Item</button>
+    </div>
+
+    <ul id="cartItems"></ul>
+
+    <button id="totalBtn" onclick="calculateTotal()">Total Price</button>
+    <h3 id="totalDisplay"></h3>
+  </div>
+
+    </center>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
