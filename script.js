@@ -11,7 +11,7 @@ const totalDisplay = document.getElementById("totalDisplay");
 
 
 // === Render the Grocery List ===
-function renderList() {
+function ogaPatata() {
   listContainer.innerHTML = "";
 
   cartItems.forEach((item, index) => {
@@ -36,7 +36,7 @@ addBtn.addEventListener("click", () => {
 
   if (name && !isNaN(price) && price > 0) {
     cartItems.push({ name, price });
-    renderList();
+    ogaPatata();
     itemNameInput.value = "";
     itemPriceInput.value = "";
   } else {
@@ -47,7 +47,7 @@ addBtn.addEventListener("click", () => {
 // === Delete Item ===
 function deleteItem(index) {
   cartItems.splice(index, 1);
-  renderList(); // re-render and update total if visible
+  ogaPatata(); // re-render and update total if visible
 }
 
 // Track whether total has been shown yet
@@ -77,4 +77,4 @@ totalBtn.addEventListener("click", () => {
 });
 
 // === Initial State ===
-renderList();
+ogaPatata();
